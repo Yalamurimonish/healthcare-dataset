@@ -4,7 +4,8 @@ import seaborn as sns
 import numpy as np
 
 # Load the data
-df = pd.read_csv('ca2.csv')
+df = pd.read_csv(r'C:\Users\nanim\OneDrive\Desktop\python\ca2.csv')
+print(df.info())
 
 # Clean column names by stripping whitespace and converting to lowercase
 df.columns = df.columns.str.strip().str.lower()
