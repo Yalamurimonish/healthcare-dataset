@@ -24,10 +24,6 @@ df['discharge date'] = pd.to_datetime(df['discharge date'], dayfirst=True)
 # Calculate length of stay
 df['length of stay'] = (df['discharge date'] - df['date of admission']).dt.days
 
-# Set style for visualizations
-sns.set_style("whitegrid")
-plt.rcParams['figure.figsize'] = (12, 6)
-
 # 1. Age Distribution
 plt.figure(figsize=(10, 6))
 sns.histplot(df['age'], bins=20, kde=True, color='skyblue')
